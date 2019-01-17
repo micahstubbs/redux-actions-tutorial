@@ -1,16 +1,5 @@
 const defaultState = { counter: 0 };
-
 const content = document.getElementById('content');
-
-const render = () => {
-  content.innerHTML = defaultState.counter;
-};
-
-render();
-
-//
-//
-//
 
 const { createStore } = window.Redux;
 const { createAction, handleAction } = window.ReduxActions;
@@ -29,4 +18,13 @@ const reducer = handleAction(
 );
 
 // create a store
-const store = createStore(reducer, defaultState)
+const store = createStore(reducer, defaultState);
+
+// render the counter value
+const render = () => {
+  content.innerHTML = store.getState().counter;
+};
+
+store.subscribe(render)
+
+render();
