@@ -1,0 +1,10 @@
+{
+  "name": "redux-actions-tutorial",
+  "version": "1.0.0",
+  "description": "walking through https://redux-actions.js.org/introduction/tutorial",
+  "main": "index.js",
+  "repository": "git@github.com:micahstubbs/redux-actions-tutorial.git",
+  "author": "micahstubbs <micah.stubbs@gmail.com>",
+  "license": "Apache-2.0",
+  "private": false
+}
