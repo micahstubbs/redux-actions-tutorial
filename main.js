@@ -2,11 +2,10 @@ const defaultState = { counter: 0 };
 const content = document.getElementById('content');
 
 const { createStore } = window.Redux;
-const { createAction, handleActions } = window.ReduxActions;
+const { createActions, handleActions } = window.ReduxActions;
 
 // create actions
-const increment = createAction('INCREMENT');
-const decrement = createAction('DECREMENT');
+const { increment, decrement } = createActions('INCREMENT', 'DECREMENT');
 
 // write a reducer to handle the action
 const reducer = handleActions(
