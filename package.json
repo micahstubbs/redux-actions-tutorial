@@ -6,5 +6,8 @@
   "repository": "git@github.com:micahstubbs/redux-actions-tutorial.git",
   "author": "micahstubbs <micah.stubbs@gmail.com>",
   "license": "Apache-2.0",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "redux-actions": "^2.6.4"
+  }
 }
