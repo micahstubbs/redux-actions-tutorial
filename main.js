@@ -2,7 +2,7 @@ const defaultState = { counter: 0 };
 const content = document.getElementById('content');
 
 const { createStore } = window.Redux;
-const { createActions, handleActions } = window.ReduxActions;
+const { createActions, handleActions, combineActions } = window.ReduxActions;
 
 // create actions
 const { increment, decrement } = createActions({
@@ -13,13 +13,10 @@ const { increment, decrement } = createActions({
 // write a reducer to handle the action
 const reducer = handleActions(
   {
-    [increment]: (state, { payload: { amount } }) => {
-      return {
-        ...state,
-        counter: state.counter + amount
-      };
-    },
-    [decrement]: (state, { payload: { amount } }) => {
+    [combineActions(increment, decrement)]: (
+      state,
+      { payload: { amount } }
+    ) => {
       return {
         ...state,
         counter: state.counter + amount
