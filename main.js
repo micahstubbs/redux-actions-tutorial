@@ -20,11 +20,15 @@ const reducer = handleAction(
 // create a store
 const store = createStore(reducer, defaultState);
 
+document.getElementById('increment').addEventListener('click', () => {
+  store.dispatch(increment());
+});
+
 // render the counter value
 const render = () => {
   content.innerHTML = store.getState().counter;
 };
 
-store.subscribe(render)
+store.subscribe(render);
 
 render();
